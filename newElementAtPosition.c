@@ -44,22 +44,29 @@ int main()
     printf("Enter %d elements :\n",arrSiz);
     for(i=0;i<arrSiz;i++)
     {
-        printf("Enter %d element :",i+1);
+        printf("Enter %d element :",i);
         scanf("%d",&num[i]);
     }
     printf("The current list of the array :\n");
     for(i=0;i<arrSiz;i++)
     {
-        printf("%d",num[i]);
+        printf("%4d",num[i]);
     }
     printf("Input the value to be inserted :\n");
     scanf("%d",&insert);
     printf("After Insert the element the new list is : \n");
     for(i=0;i<arrSiz;i++)
     {
-        if(num[i]<insert)
+        if(insert<num[i])
         {
-            num[i+1]=insert;
+            // num[arrSiz-1]=num[arrSiz];
+            num[i]=insert;
+            
+            
         }
+    }
+    for(i=0;i<arrSiz+1;i++)
+    {
+        printf("%4d",num[i]);
     }
 }
