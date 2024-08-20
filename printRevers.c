@@ -1,16 +1,16 @@
-// Write a C program to Sort the array in ascending order and print it.
+// Write a C program to Sort the array in Revers order and print it.
 
 
 // Input as :
 
 // Enter array size : 6
 
-// Enter 6 element : 4 3 5 6 2 1
+// Enter 6 element : 6 5 4 3 2 1
 
 
 // Output as :
 
-// After sorting in ascending order :
+// Array in Revers order :
 
 // 1 2 3 4 5 6
 
@@ -27,7 +27,7 @@ int main()
     {
         scanf("%d",&num[i]);
     }
-     printf("\nRevers array element are :");
+     printf("\n Revers array element are :");
     for(i=arrayNum-1;i>=0;i--)
     {
         printf("\n %d",num[i]);
