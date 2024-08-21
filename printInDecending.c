@@ -18,24 +18,25 @@ int main()
     printf("Enter size of array between 1-10 :");
     scanf("%d",&arrNum);
 
-    printf("Enter array element");
+    printf("Enter array element",arrNum);
     for(i=0;i<arrNum;i++)
     {
         scanf("%d",&num[i]);
     }
      printf("\nArray element in Decending order :");
-    for(i=0;i<=arrNum;i++)
+    for(i=0;i<=arrNum-2;i++)
     {
-        if(num[i]<num[i+1])
+        for(int j=i+1;j<=arrNum-1;j++)
+        if(num[i]<num[j])
         {
             temp=num[i];
-            num[i+1]=num[i];
+            num[j]=num[i];
             num[i]=temp;
         }
 
     }
     for(i=0;i<arrNum;i++)
     {
-        printf("%d",num[i]);
+        printf("%4d",num[i]);
     }
 }
