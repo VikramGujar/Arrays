@@ -10,33 +10,33 @@
 // 6 5 4 3 2 1
 // ======================
 
+#include <stdio.h>
 
-#include<stdio.h>
-int main()
-{
-    int num[10],arrNum,temp,i;
-    printf("Enter size of array between 1-10 :");
-    scanf("%d",&arrNum);
+int main() {
+    int num[10], arrNum, temp, i, j;
 
-    printf("Enter array element",arrNum);
-    for(i=0;i<arrNum;i++)
-    {
-        scanf("%d",&num[i]);
+    printf("Enter size of array between 1-10: ");
+    scanf("%d", &arrNum);
+
+    printf("Enter %d elements: ", arrNum);
+    for(i = 0; i < arrNum; i++) {
+        scanf("%d", &num[i]);
     }
-     printf("\nArray element in Decending order :");
-    for(i=0;i<=arrNum-2;i++)
-    {
-        for(int j=i+1;j<=arrNum-1;j++)
-        if(num[i]<num[j])
-        {
-            temp=num[i];
-            num[j]=num[i];
-            num[i]=temp;
+
+    for(i = 0; i < arrNum - 1; i++) {
+        for(j = i + 1; j < arrNum; j++) {
+            if(num[i] < num[j]) {
+                temp = num[i];
+                num[i] = num[j];
+                num[j] = temp;
+            }
         }
+    }
 
+    printf("\nArray elements in descending order:\n");
+    for(i = 0; i < arrNum; i++) {
+        printf("%d ", num[i]);
     }
-    for(i=0;i<arrNum;i++)
-    {
-        printf("%4d",num[i]);
-    }
+
+    return 0;
 }
