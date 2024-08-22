@@ -9,11 +9,11 @@ int main()
     printf("Enter your id :");
     scanf("%d",&id);
     printf("Enter your name :");
-    gets(name);
+    scanf("%s",&name);
 
     for(i=0;i<6;i++)
     {
-        printf("Enter marks of sub %d",i+1);
+        printf("Enter marks of sub %d :",i+1);
         scanf("%d",&mark[i]);
         total+=mark[i];
         if(mark[i]<35)
@@ -22,7 +22,7 @@ int main()
     avg=total/6;
     printf("Id\tName\tTot\tAvg\tGrade \n");
     printf("------------------------------------\n");
-    printf("%d\t%s\t%d\t%.2f\t",id,name,total,total/6);
+    printf("%d\t%s\t%d\t%.2f\t",id,name,total,avg);
     if(pass==0)
     printf("Fail");
     else if(total/6>80)

@@ -30,6 +30,6 @@ int main()
      printf("\n Revers array element are :");
     for(i=arrayNum-1;i>=0;i--)
     {
-        printf("\n %d",num[i]);
+        printf("%d",num[i]);
     }
 }
